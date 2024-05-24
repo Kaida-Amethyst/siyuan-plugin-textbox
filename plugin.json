@@ -1,9 +1,9 @@
 {
-  "name": "plugin-sample-vite-svelte",
-  "author": "frostime",
-  "url": "https://github.com/siyuan-note/plugin-sample-vite-svelte",
-  "version": "0.3.5",
-  "minAppVersion": "3.0.12",
+  "name": "siyuan-plugin-textbox",
+  "author": "Kaida Amethyst",
+  "url": "https://github.com/Kaida-Aemthyst/siyuan-plugin-textbox",
+  "version": "0.1.0",
+  "minAppVersion": "3.0.9",
   "backends": [
     "windows",
     "linux",
@@ -19,12 +19,12 @@
     "desktop-window"
   ],
   "displayName": {
-    "en_US": "Plugin sample with vite and svelte",
-    "zh_CN": "插件样例 vite + svelte 版"
+    "en_US": "Textbox",
+    "zh_CN": "文本框"
   },
   "description": {
-    "en_US": "SiYuan plugin sample with vite and svelte",
-    "zh_CN": "使用 vite 和 svelte 开发的思源插件样例"
+    "en_US": "A simple textbox",
+    "zh_CN": "为内容块添加一个文本框。"
   },
   "readme": {
     "en_US": "README.md",
@@ -36,6 +36,6 @@
     ]
   },
   "keywords": [
-    "plugin", "sample", "插件样例"
+    "plugin", "textbox"
   ]
 }

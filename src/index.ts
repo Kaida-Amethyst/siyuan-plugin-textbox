@@ -48,15 +48,36 @@ export default class PluginSample extends Plugin {
   }
 
   private blockIconEvent({ detail }: any) {
-      detail.menu.addItem({
-          icon: "iconFace",
-          label: "TextBox",
-          click: () => {
-            let ele = detail.blockElements[0];
-            let nodeId = ele.getAttribute("data-node-id");
-            showMessage("node-id: " + nodeId);
-            this.setupTextBoxAttr(nodeId, "textbox");
-          }
-      });
+    let subMenus = [
+      {
+        icon: "iconFace",
+        label: "TextBox",
+        click: () => {
+          let ele = detail.blockElements[0];
+          let nodeId = ele.getAttribute("data-node-id");
+          showMessage("node-id: " + nodeId);
+          this.setupTextBoxAttr(nodeId, "textbox");
+        }
+      },
+      {
+        type: "separator"
+      },
+      {
+        icon: "iconFace",
+        label: "Eleminate",
+        click: () => {
+          let ele = detail.blockElements[0];
+          let nodeId = ele.getAttribute("data-node-id");
+          showMessage("node-id: " + nodeId);
+          this.setupTextBoxAttr(nodeId, "");
+        }
+      },
+    ];
+    detail.menu.addItem ({
+      icon: "iconFace",
+      label: "TextBox",
+      type: "submenu",
+      submenu: subMenus
+    });
   }
 }

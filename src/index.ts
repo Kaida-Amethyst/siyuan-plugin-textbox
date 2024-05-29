@@ -25,15 +25,6 @@ export default class PluginSample extends Plugin {
   <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466"/>
 </svg>`)
 
-    const topBarElement = this.addTopBar({
-      icon : "iconFace",
-      title: "TopBar button",
-      position: "right",
-      callback: () => {
-        showMessage("click Top Bar Button");
-      }
-    });
-
     this.eventBus.on("click-blockicon", this.blockIconEventBindThis);
 
     console.log("Succeed!")

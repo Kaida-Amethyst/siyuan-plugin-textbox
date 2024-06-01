@@ -40,7 +40,7 @@ export default class PluginSample extends Plugin {
 
   async setupTextBoxAttr(blockId, value) {
     let url = "/api/attr/setBlockAttrs";
-    let attrs_data = { "custom-plugin-textbox": value};
+    let attrs_data = { "data-type":"NodeSuperBlock", "custom-plugin-textbox": value};
     let post_data = { id: blockId, attrs:attrs_data };
     let response = await fetchSyncPost(url, post_data);
     let res = response.code === 0 ? response.data : null;
